@@ -43,7 +43,7 @@ kama(_src)=>
     slowAlpha = (2/(slowMA+1))
     sc = pow( er * (fastAlpha - slowAlpha ) + slowAlpha, 2)
     kama = 0.0
-    kama := nz(kama[1]) + sc * (realC - nz(kama[1]))
+    kama := nz(kama[1]) + sc * (_src - nz(kama[1]))
 //KAMA
 
 sv = change(realC,1) > 0 ? volume : -volume
